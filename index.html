@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>암호 생성기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>강력한 암호 생성기</h1>
+        <label for="length">암호 길이:</label>
+        <input type="number" id="length" min="4" max="64" value="16">
+        
+        <label for="special">특수문자 포함:</label>
+        <input type="checkbox" id="special" checked>
+        
+        <button onclick="generatePassword()">암호 생성</button>
+        
+        <h2>생성된 암호:</h2>
+        <p id="password"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
