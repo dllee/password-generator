@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>강력한 암호 생성기</title>
+    <title>Strong Password Generator</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="강력한 암호를 자동으로 생성해주는 도구. 암호 강도 설정 가능 (길이, 특수문자 포함 여부 등).">
-    <meta name="keywords" content="암호 생성기, 강력한 암호, 암호 생성, 특수문자 포함 암호, 암호 강도 설정">
+    <meta name="description" content="A tool to automatically generate strong passwords. Adjustable password strength (length, include special characters, etc.).">
+    <meta name="keywords" content="password generator, strong password, generate password, special characters, password strength, 암호 생성기, 강력한 암호, 암호 생성, 특수문자, contraseñas fuertes, generador de contraseñas">
     <meta name="author" content="Your Name">
 </head>
 <body>
     <div class="container">
-        <h1>강력한 암호 생성기</h1>
+        <h1 id="title">Strong Password Generator</h1>
+        <label for="language" id="language-label">Select Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="ko">한국어</option>
+            <option value="es">Español</option>
+        </select>
         <form>
-            <label for="length">암호 길이:</label>
+            <label for="length" id="length-label">Password Length:</label>
             <input type="number" id="length" min="4" max="64" value="16">
             
-            <label for="special">특수문자 포함:</label>
+            <label for="special" id="special-label">Include Special Characters:</label>
             <input type="checkbox" id="special" checked>
             
-            <button type="button" onclick="generatePassword()">암호 생성</button>
+            <button type="button" onclick="generatePassword()" id="generate-button">Generate Password</button>
         </form>
-        <h2>생성된 암호:</h2>
+        <h2 id="result-label">Generated Password:</h2>
         <p id="password"></p>
     </div>
     <script src="script.js"></script>
